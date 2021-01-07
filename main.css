@@ -1,0 +1,37 @@
+/*
+Description:
+    Contains all the styles for the number expander page.
+    
+Version History:
+  
+*/
+
+div{
+  text-align: left;
+}
+
+h1{
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  color: blue;
+}
+
+p{
+  font-size: 20px;
+  text-align: left;
+}
+
+p.info{
+  font-size: 14px;
+  font-style: italic;
+  text-align: left;
+}
+
+input[type="number"] {
+   width:75px;
+}
+
+input[type="button"] {
+   width:200px;
+}

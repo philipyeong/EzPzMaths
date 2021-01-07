@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+        <title>Number Expander</title>
+        <link rel="stylesheet" href="main.css" type="text/css" />	
+        <script type="text/javascript" src="numexpander.js"></script>
+
+          
+<style>
+
+</style>
+</head>
+<body>
+<script>
+	let varrUser = [];	//array to store user provided number and system defaults to work with each digit in the number
+</script>
+
+<h1>Create your own number expander</h1>
+<div>  
+<label for="expanderSize">Enter your number (up to 7 digits): </label>
+<input type="number" id="numEntered" name="numEntered" min="1" max="7" onblur="checkValueEntered()"><br><br>
+<input type="button" value="Clear Page" onClick="resetPage()">
+<input type="button" value="Reset Expander" onClick="makeExpander()">
+<p class="info">Click on word boxes to hide them. Use the Reset Expander button to re-display hidden word boxes.</p>
+<p></p>
+
+<canvas id="myCanvas">Your browser does not support the HTML5 canvas tag.</canvas>
+
+<br><br>
+<input type="button" id="btnstdPartition" disabled = "true" value="Show Standard Partition" onClick="displayStdPartition()">
+<p id="display"> </p>
+<input type="button" id="btnnstdPartition" disabled = "true" value="Show Non Standard Partition" onClick="displayNonStdPartition()">
+<p id="display2"> </p>
+</div>
+</body>
