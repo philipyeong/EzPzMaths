@@ -1,0 +1,42 @@
+/*
+Description:
+    Contains all the styles for the index page.
+    
+Version History:
+  
+*/
+
+h1	{
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	color: blue;
+}
+
+div	{
+	margin-left: 25px;
+}
+
+.btn-group .button {
+	background-color: yellow; 
+	border: 2px solid black;
+	border-radius: 25px;
+ 	color: green;
+	padding: 15px 32px;
+	text-align: center;	
+	text-decoration: none;
+	display: inline-block;	
+	font-size: 16px;
+	cursor: pointer;
+	float: left;
+}
+
+.btn-group .button:not(:last-child) {
+//enable this code if bordr-radius is set to 0
+//	border-right: none; /* Prevent double borders */
+}
+
+.btn-group .button:hover {
+	color: yellow;
+	background-color: green;
+}

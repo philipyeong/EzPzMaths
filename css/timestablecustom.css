@@ -1,0 +1,39 @@
+/*
+Description:
+    Contains all the styles for the custom times table page.
+    
+Version History:
+   
+*/
+
+div{
+  text-align: left;
+  margin-left: 25px;
+}
+
+h1{
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: blue;
+
+}
+
+s1{
+  text-align: left;
+  font-size: 18px;
+}
+
+l2{
+  font-size: 16px;
+  color: red;
+}
+
+d1{
+  text-align: center;
+  font-size: 14px;
+}
+
+input[type="number"]{
+  width: 40px;
+}

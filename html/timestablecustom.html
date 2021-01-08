@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+        <title>Times Table Wheel</title>
+        <link rel="stylesheet" href="../css/timestablecustom.css" type="text/css" />	
+<style>
+</style>
+</head>
+<body>
+<script>
+
+//This function is used purely for debugging purposes if required
+function display() {
+	document.getElementById("display").innerHTML = "You've selected " + 		document.getElementById("ttableno").value + " times table to display.";
+}
+
+
+function resetPage(){
+	window.location.reload();
+}
+
+function showWheel(){
+var maxTimesTable = document.getElementById("ttableno").value;
+
+for (var i = 0; i < maxTimesTable; i++) {
+	var vTablename = "TimesTable"+i;
+	var vTablefreq = "Occurrence"+i;
+	var vfreqID = Number(i) + Number(maxTimesTable);
+
+	vTimesTbl_Value = document.getElementById(vTablename).value;
+	vFreq_Value = document.getElementById(vTablefreq).value;
+
+	localStorage.setItem(i, vTimesTbl_Value);
+	localStorage.setItem(vfreqID, vFreq_Value);
+
+}
+
+var vParameter = "?para1=" + maxTimesTable;
+var vHTML = "timestablecustomwheel.html" + vParameter;
+var windowObjRef = window.open(vHTML);
+
+}
+
+function ConfigureWheel() {
+var rowText = "";
+var maxRows = document.getElementById("ttableno").value;
+
+//Enable and disable configure and create wheel buttons
+document.getElementById("btnConfigure").disabled = true;
+document.getElementById("btnCreateWheel").disabled = false;
+
+//Create data entry div
+var vDiv1 = document.createElement("d1");
+document.getElementById("customWheelHeading").appendChild(vDiv1);
+
+//Setup headers for data entry fields
+var vHeading1 = document.createElement("S1");
+document.getElementById("customWheelHeading").appendChild(vHeading1);
+vHeading1.innerHTML = "Setup your times table wheel<br><br>";
+
+
+for (var i = 0; i < maxRows; i++) {
+	const cTimesTableMin = 1;
+	const cTimesTableMax = 12;
+	const cFreqMin = 1;
+	const cFreqMax = 3;
+
+	var vTablename = "TimesTable"+i;
+	var vTablefreq = "Occurrence"+i;
+	var maxLength = 2;
+
+
+	var lbl1 = document.createElement("l2");
+	lbl1.for = vTablename;
+	lbl1.innerHTML = "Times Table " + (i+1) + ": ";
+	//document.body.appendChild(lbl1);
+	document.getElementById("customWheelHeading").appendChild(lbl1);
+
+  	var fld = document.createElement("input");
+  	fld.type = "number";
+	fld.min = cTimesTableMin;
+	fld.max = cTimesTableMax;
+  	fld.id = vTablename;
+  	fld.name = vTablename;
+  	fld.placeholder = vTablename ;
+	//document.body.appendChild(fld);
+	document.getElementById("customWheelHeading").appendChild(fld);
+
+
+	var lbl2 = document.createElement("l2");
+	lbl2.for = vTablefreq;
+	lbl2.innerHTML = "&emsp;" + "Occurence: ";
+	//document.body.appendChild(lbl2);
+	document.getElementById("customWheelHeading").appendChild(lbl2);	
+
+  	var freq = document.createElement("input");
+  	freq.type = "number";
+	freq.min = cFreqMin;
+	freq.max = cFreqMax;
+  	freq.id = vTablefreq;
+  	freq.name = vTablefreq;
+  	freq.placeholder = vTablefreq;
+  	//document.body.appendChild(freq);
+  	document.getElementById("customWheelHeading").appendChild(freq);
+
+//	document.body.appendChild(document.createElement("br"));
+	let vLineBreak = document.createElement("br");
+	document.getElementById("customWheelHeading").appendChild(vLineBreak);
+
+}
+//	document.body.appendChild(document.createElement("br"));
+
+	
+
+}
+
+</script>
+
+<div>  
+<h1>Customise your times table wheel</h1>
+
+<label for="ttableno">How many different times table in your wheel?</label>
+<input type="number" id="ttableno" name="table" min="1" max="6"><br><br>
+
+<input type="button" value="Clear Page" onClick="resetPage()">
+<input type="button" id="btnConfigure" value="Customise Wheel" onClick="ConfigureWheel()">
+<input type="button" id="btnCreateWheel" disabled = "true" value="Generate Wheel" onClick="showWheel()">
+
+
+<p id="display"> </p>
+<p id="display2"> </p>
+<p id="customWheelHeading"> </p>
+</div>
+
+</body>
