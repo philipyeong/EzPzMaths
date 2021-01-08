@@ -4,7 +4,7 @@ Times Table (custom)
 Adapted from a prize wheel solution, this application allows the user to define parameters for creating a times table wheel before a wheel of times tables is presented for the user to spin.
 
 Custom Times Table wheel
-Adapted from a prize winning project, this solution allows users to specify different times tables and their occurence to display in a prize wheel that can be spun.
+Adapted from a project that displays prize wheel, this solution allows users to specify different times tables and their occurence to display in a prize wheel that can be spun.
 
 Number Expander
 Displays a number expander to support learning about standard and non standard partitioning of numbers in maths
