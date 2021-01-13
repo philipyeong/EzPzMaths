@@ -1,0 +1,106 @@
+/*
+Description:
+    Contains all the styles for the index page.
+    
+Version History:
+  
+*/
+
+h1{
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	color: blue;
+}
+
+#resultsDisplay{
+	border-style: solid;
+	border-width: thin;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+.resultsheaderDiplay{
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: underline;
+	color: green;
+
+}
+	
+
+div{
+	margin-left: 25px;
+	font-size: 18px;
+}
+
+p{
+	font-size: 24px;
+	text-align: center;
+}
+
+hr{	
+	display: block;
+    	height: 1px;
+    	border: 0;
+    	border-top: 1px solid #c9c9c9;
+    	margin: 1em 0;
+    	padding: 0;
+}
+
+p.mab{
+	display: flex;
+	margin-left: 25px;
+	justify-content: space-evenly;
+}
+
+
+input[type="number"]{
+	width:75px;
+}
+
+
+.btnlabel{
+	background-color: white;
+	font-weight: bold;
+}
+
+.button-general{
+	margin-left: 50px;
+}
+
+.button-group{
+	margin-left: 25px;
+	margin-right: 25px;
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+}
+
+.button{	
+	display: block;
+	margin-top: auto;
+	margin-left: auto;	
+	width: 150px;
+	box-sizing: border-box;
+	object-fit: contain;
+	height: 75px;
+	background-color: white;
+}
+
+.button-unit{
+	display: block;
+	margin-top: auto;
+	margin-left: auto;	
+	margin-bottom: 10px;
+	width: 150px;
+	box-sizing: border-box;
+	object-fit: scale-down;
+	background-color: white;
+}
+
+.button:hover, .button-unit:hover{
+	color: yellow;
+	background-color: green;
+]
