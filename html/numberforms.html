@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+        <title>Numbers in different forms</title>     
+	<link rel="stylesheet" href="../css/numberforms.css" type="text/css" />	     
+        <script type="text/javascript" src="../script/numberforms.js"></script>
+<style>
+</style>
+</head>
+<body>
+<script>
+</script>
+
+<h1>Numbers in different forms</h1>
+<div>
+<label for="numEntered">Enter your number (up to 4 digits) to see it represented in different forms: </label>
+<input type="number" id="numEntered" name="numEntered" min="1" max="4" onblur="expandNumber()">
+<input type="button" class = "button-general" value="Clear Page" onClick="resetPage()">
+<br><br>or
+<br><br>Make a number by clicking on the MABs<br><br>
+</div>
+
+<div class="button-group">
+<button class="btnlabel">Thousands<br><img src="../images/block.png" class="button" onclick="addimage('b','user')" width="50" height="50""></button>
+<button class="btnlabel">Hundreds<br><img src="../images/flat.png" class="button" onclick="addimage('f','user')" width="50" height="50""></button>
+<button class="btnlabel">Tens<br><img src="../images/long.png" class="button" onclick="addimage('l','user')" width="" height="50""></button>
+<button class="btnlabel">Ones<br><br><img src="../images/unit.png" class="button-unit" onclick="addimage('u','user')" width="50" height="50"></button>
+</div>
+<p></p>
+<div id="resultsDisplay">
+<h1 class="resultsheaderDiplay">MAB form</h1>
+<p id="message"></p>
+<p id="block" class="mab"></p>
+<hr>
+<p id="flat" class="mab"> </p>
+<hr>
+<p id="long" class="mab"> </p>
+<hr>
+<p id="unit" class="mab"> </p>
+</div>
+<div id="resultsDisplay">
+<h1 class="resultsheaderDiplay">Standard partition form</h1>
+<p id="stdPartition"></p>
+</div>
+<div id="resultsDisplay">
+<h1 class="resultsheaderDiplay">Word form</h1>
+<p id="wordDesc"></p>
+</divd>
+
+</body>
